@@ -5,6 +5,8 @@ import * as morgan from "morgan";
 import { MsTeamsApiRouter, MsTeamsPageRouter } from "express-msteams-host";
 import * as debug from "debug";
 import * as compression from "compression";
+import { StandupAgendaRouter } from "./api/StandupAgendaRouter";
+import { init } from "node-persist";
 
 // Initialize debug logging module
 const log = debug("msteams");
@@ -54,6 +56,8 @@ express.use(MsTeamsPageRouter({
     components: allComponents
 }));
 
+express.use("/api/standupagenda", StandupAgendaRouter({}));
+
 // Set default web page
 express.use("/", Express.static(path.join(__dirname, "web/"), {
     index: "index.html"
@@ -65,4 +69,14 @@ express.set("port", port);
 // Start the webserver
 http.createServer(express).listen(port, () => {
     log(`Server running on ${port}`);
+
+    (async () => {
+        await init({
+            dir: "db",
+            stringify: JSON.stringify,
+            parse: JSON.parse,
+            encoding: "utf8"
+        });
+    })();
+
 });

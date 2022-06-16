@@ -1,14 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
   "manifestVersion": "1.11",
-  "id": "{{APPLICATION_ID}}",
-  "version": "{{VERSION}}",
-  "packageName": "{{PACKAGE_NAME}}",
+  "id": "7e513e80-ec82-11ec-9b92-3f9ed1d064ac",
+  "version": "0.0.1",
+  "packageName": "agendly",
   "developer": {
     "name": "SoftwareONE",
-    "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
-    "privacyUrl": "https://{{PUBLIC_HOSTNAME}}/privacy.html",
-    "termsOfUseUrl": "https://{{PUBLIC_HOSTNAME}}/tou.html"
+    "websiteUrl": "https://3aa5-89-217-34-202.ngrok.io",
+    "privacyUrl": "https://3aa5-89-217-34-202.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://3aa5-89-217-34-202.ngrok.io/tou.html"
   },
   "name": {
     "short": "Agendly",
@@ -25,7 +25,7 @@
   "accentColor": "#D85028",
   "configurableTabs": [
     {
-      "configurationUrl": "https://{{PUBLIC_HOSTNAME}}/agendaTab/config.html?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}",
+      "configurationUrl": "https://3aa5-89-217-34-202.ngrok.io/agendaTab/config.html?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}",
       "canUpdateConfiguration": true,
       "scopes": [
         "groupchat"
@@ -51,11 +51,11 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "{{PUBLIC_HOSTNAME}}"
+    "3aa5-89-217-34-202.ngrok.io"
   ],
   "showLoadingIndicator": false,
   "webApplicationInfo": {
-    "id": "{{TAB_APP_ID}}",
-    "resource": "{{TAB_APP_URI}}"
+    "id": "161d888d-f17b-4da4-a15b-67c047958ee6",
+    "resource": "api://3aa5-89-217-34-202.ngrok.io/161d888d-f17b-4da4-a15b-67c047958ee6"
   }
 }
